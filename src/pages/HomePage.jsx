@@ -1,9 +1,10 @@
-import MainSection from '../components/MainSection'
-import InfoSection from '../components/InfoSection'
-import GallerySection from '../components/GallerySection'
-import ReviewsSection from '../components/ReviewsSection'
-import MapSection from '../components/MapSection'
+import MainSection from '../components/sections/MainSection'
+import InfoSection from '../components/sections/InfoSection'
+import GallerySection from '../components/sections/GallerySection'
+import ReviewsSection from '../components/sections/ReviewsSection'
+import MapSection from '../components/sections/MapSection'
 import Footer from '../components/Footer'
+import FaqSection from '../components/sections/FaqSection'
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <GallerySection />
             <ReviewsSection />
             <MapSection />
+            <FaqSection />
             <Footer />
         </>
     )

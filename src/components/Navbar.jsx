@@ -8,12 +8,15 @@ const Navbar = () => {
     const toggleNavBar = () =>{
         setNavOpen((n) => !navOpen)
     }
+
+    const airbnbURL = 'https://www.airbnb.ca/rooms/1160767419216237462';
+
     return (
         <nav
             className="flex-wrap lg:flex items-center py-8 md:py-14 xl:relative z-10 border-b-2 lg:border-b-0"
         >
             <div className="flex items-center justify-between mb-0 px-6">
-                <Link to="#" className='flex text-3xl'>
+                <Link to="/" className='flex text-3xl'>
                     <GiWaveSurfer />
                     <h2>
                         Istana Loft
@@ -34,42 +37,41 @@ const Navbar = () => {
                 }
             >
                 <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                    <Link to="/about">
+                    <a href="#about">
                         About
-                    </Link>
+                    </a>
                 </li>
                 <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                    <Link to="/#gallery">
+                    <a href="#gallery">
                         Gallery
-                    </Link>
+                    </a>
                 </li>
                 <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                    <Link to="/#reviews">
+                    <a href="#reviews">
                         Reviews
-                    </Link>
+                    </a>
                 </li>
                 <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                    <Link to="/#map">
+                    <a href="#map">
                         Map
-                    </Link>
+                    </a>
                 </li>
                 <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                    <Link to="/faq">
+                    <a href="#faq">
                         FAQ
-                    </Link>
+                    </a>
                 </li>
             </ul>
-            <Link
+            <a
+                href={airbnbURL}
+                target="_blank"
                 className={
                     `px-5 py-3 border-2 hover:border-green-700 rounded-lg font-semibold hover:text-green-700 hover:bg-white text-lg bg-green-700 text-white transition ease-linear duration-500 
                     ${navOpen === false && 'hidden lg:block'}`
                 }
-                to={'/contact'}
             >
                 Book Now
-            </Link>
-            
-
+            </a>
         </nav>
     )
 }

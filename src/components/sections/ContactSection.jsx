@@ -19,7 +19,7 @@ const ContactSection = () => {
                             {' '}right to book a meeting with us. Totally free.
                         </p>
                     </div>
-                    <div className="hidden md:block bg-white xl:relative px-6 py-3 rounded-3xl">
+                    <div className="md:block bg-white xl:relative px-6 py-3 rounded-3xl">
                         <div className="py-3">
                             <h3 className="font-semibold text-gray-900 text-3xl">
                                 Book a meeting

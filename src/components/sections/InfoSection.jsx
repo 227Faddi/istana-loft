@@ -1,7 +1,7 @@
 import { LuHeartHandshake } from "react-icons/lu";
 import { FaKey } from "react-icons/fa";
 import { TbBeach } from "react-icons/tb";
-import InfoItem from "./ui/InfoItem";
+import InfoItem from "../InfoItem";
 
 const InfoSection = () => {
     const content = [

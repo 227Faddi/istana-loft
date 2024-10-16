@@ -1,6 +1,4 @@
-
-import { comment } from 'postcss';
-import ReviewCard from './ui/ReviewCard';
+import ReviewCard from '../ReviewCard';
 
 const ReviewsSection = () => {
     const content = [

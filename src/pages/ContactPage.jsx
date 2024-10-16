@@ -1,15 +1,17 @@
 import Navbar from "../components/Navbar"
 import { Link } from "react-router-dom"
-import ContactSection from "../components/ContactSection"
+import ContactSection from "../components/sections/ContactSection"
 import Footer from "../components/Footer"
+import { useEffect } from "react"
+import { GiWaveSurfer } from "react-icons/gi"
 
 const ContactPage = () => {
     return (
-        <div className="container max-w-screen-xl mx-auto px-4">
-            <Navbar />
+        <>
+            
             <ContactSection />
             <Footer />
-        </div>
+        </>
     )
 }
 

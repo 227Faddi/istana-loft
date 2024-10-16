@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
-import Navbar from "./Navbar"
+import Navbar from "../Navbar"
 
 const MainSection = () => {
+    const airbnbURL = 'https://www.airbnb.ca/rooms/1160767419216237462';
     return (
         <section className="bg-white mb-20 md:mb-52 xl:mb-72">
             <div className="container max-w-screen-xl mx-auto px-4">
@@ -18,12 +19,13 @@ const MainSection = () => {
                             <br />
                             {' '}a cozy and rejuvenating stay in Sardinia's coastal paradise.
                         </p>
-                        <Link
-                            to={'/contact'}
+                        <a
+                            href={airbnbURL}
+                            target="_blank"
                             className='px-5 py-3 border-2 hover:border-green-700 rounded-lg font-semibold hover:text-green-700 hover:bg-white text-lg bg-green-700 text-white transition ease-linear duration-500'
                         >
                             Reserve Your Stay
-                        </Link>
+                        </a>
                     </div>
                     <div className="hidden xl:block xl:absolute z-0 top-0 right-0 overflow-hidden rounded-bl-3xl w-[708px] h-[800px] xl:max-w-[45%]">
                         <img

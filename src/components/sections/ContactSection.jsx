@@ -7,7 +7,7 @@ const ContactSection = () => {
         }
     ]
     return (
-        <section className="bg-white py-10 md:py-16" id='contact'>
+        <section className="bg-white py-6" id='contact'>
             <div className="container max-w-screen-xl mx-auto px-4 xl:relative">
                 <div className="bg-green-800 flex flex-col lg:flex-row items-center justify-evenly py-14 px-6 rounded-3xl">
                     <div className="text-center lg:text-left mb-10 lg:mb-0">
@@ -24,9 +24,9 @@ const ContactSection = () => {
                             {' '}right to book a meeting with us. Totally free.
                         </p>
                     </div>
-                    <div className="max-w-64 sm:max-w-full sm:w-80 bg-white px-6 py-3 rounded-3xl ">
+                    <div className="max-w-64 sm:max-w-full sm:w-96 bg-white px-6 py-3 rounded-3xl ">
                         <div className="py-3">
-                            <h3 className="font-semibold text-gray-900 text-3xl">
+                            <h3 className="font-semibold text-gray-900 text-3xl text-center">
                                 Contact Me
                             </h3>
                         </div>
@@ -45,16 +45,9 @@ const ContactSection = () => {
                             />
                         </div>
                         <div className="py-3">
-                            <input
+                            <textarea
                                 className="px-4 py-4 w-full bg-gray-100 font-normal text-lg placeholder-gray-400 rounded-xl outline-none"
-                                placeholder="Date"
-                                type="text"
-                            />
-                        </div>
-                        <div className="py-3">
-                            <input
-                                className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
-                                placeholder="Virtual Meeting"
+                                placeholder="message"
                                 type="text"
                             />
                         </div>

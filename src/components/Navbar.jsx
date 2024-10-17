@@ -11,11 +11,16 @@ const Navbar = () => {
 
     const airbnbURL = 'https://www.airbnb.ca/rooms/1160767419216237462';
 
+    const transition = ''
+
+    const linkClass = 'font-semibold text-gray-900 text-lg hover:text-gray-400 mb-5 lg:mb-0'
+
     return (
         <nav
-            className="flex-wrap lg:flex items-center py-8 md:py-14 xl:relative z-10 border-b-2 lg:border-b-0"
+            className={`${navOpen ? 'h-auto' : 'h-[106px]'} overflow-hidden lg:h-auto px-7 md:px-12 flex-wrap lg:flex items-center 
+            py-8 lg:py-14 xl:relative z-10 border-b-2 lg:border-b-0 fixed top-0 right-0 left-0 bg-white lg:bg-transparent lg:static`}
         >
-            <div className="flex items-center justify-between mb-0 px-6">
+            <div className="flex items-center justify-between mb-0">
                 <Link to="/" className='flex text-3xl'>
                     <GiWaveSurfer />
                     <h2>
@@ -31,35 +36,35 @@ const Navbar = () => {
             </div>
             <ul
                 className={
-                    `lg:flex flex-col lg:flex-row lg:items-center lg:m-auto lg:space-x-8 xl:space-x-16 
-                    transform transition-all duration-1000 ease-in-out overflow-hidden
-                    ${navOpen ? 'max-h-[500px] opacity-100 mt-8' : 'max-h-0 opacity-0 lg:opacity-100 lg:max-h-none'}`
+                    `lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-16
+                    transform transition-all duration-500 overflow-hidden mt-9 lg:mt-0
+                    ${navOpen ? 'max-h-[500px]' : 'max-h-0 lg:max-h-none'}`
                 }
             >
-                <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                    <a href="#about">
-                        About
-                    </a>
-                </li>
-                <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                <li className={linkClass}>
                     <a href="#gallery">
-                        Gallery
+                        Photos
                     </a>
                 </li>
-                <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                <li className={linkClass}>
                     <a href="#reviews">
                         Reviews
                     </a>
                 </li>
-                <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                <li className={linkClass}>
                     <a href="#map">
-                        Map
+                        Location
                     </a>
                 </li>
-                <li className="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                <li className={linkClass}>
                     <a href="#faq">
                         FAQ
                     </a>
+                </li>
+                <li className={linkClass}>
+                    <Link to="/contact">
+                        Contact
+                    </Link>
                 </li>
             </ul>
             <a

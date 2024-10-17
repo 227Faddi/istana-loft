@@ -20,4 +20,4 @@ const InfoItem = ({ icon, title, text1, text2}) => {
     )
 }
 
-export default InfoItem
+export default InfoItem 

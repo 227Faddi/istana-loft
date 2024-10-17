@@ -1,7 +1,29 @@
+import { Link } from "react-router-dom"
+import FaqItem from "../FaqItem"
+
 const FaqSection = () => {
+  const content = [
+    {
+      title: 'How to create an account?',
+      text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.'
+    },
+    {
+      title: 'How to create an account?',
+      text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.'
+    },
+    {
+      title: 'How to create an account?',
+      text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.'
+    },
+    {
+      title: 'How to create an account?',
+      text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.'
+    },
+  ]
+
   return (
-    <section className="py-10 sm:py-16 lg:py-24">
-      <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+    <section className="py-10 px-4" id="faq">
+      <div className="max-w-5xl mx-auto sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <p className="font-normal text-gray-400 text-lg md:text-xl text-center uppercase mb-6">
             FAQ
@@ -11,73 +33,24 @@ const FaqSection = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 mt-12 md:mt-20 md:grid-cols-2 gap-y-16 gap-x-20">
-          <div className="flex items-start">
-            <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-green-700 rounded-full">
-              <span className="text-lg font-semibold text-white">?</span>
-            </div>
-            <div className="ml-4">
-              <p className="text-xl font-semibold">
-                How to create an account?
-              </p>
-              <p className="mt-4 text-base text-gray-400">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-green-700 rounded-full">
-              <span className="text-lg font-semibold text-white">?</span>
-            </div>
-            <div className="ml-4">
-              <p className="text-xl font-semibold">
-                How can I make payment?
-              </p>
-              <p className="mt-4 text-base text-gray-400">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-green-700 rounded-full">
-              <span className="text-lg font-semibold text-white">?</span>
-            </div>
-            <div className="ml-4">
-              <p className="text-xl font-semibold">
-                Do you provide discounts?
-              </p>
-              <p className="mt-4 text-base text-gray-400">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-green-700 rounded-full">
-              <span className="text-lg font-semibold text-white">?</span>
-            </div>
-            <div className="ml-4">
-              <p className="text-xl font-semibold">
-                How do you provide support?
-              </p>
-              <p className="mt-4 text-base text-gray-400">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-          </div>
+          {content.map((item, index) =>(
+            <FaqItem 
+              key={index} 
+              title={item.title} 
+              text={item.text}
+            />
+          ))}
         </div>
         <div className="flex items-center justify-center mt-12 md:mt-20">
           <div className="px-8 py-4 text-center bg-green-700 rounded-full">
             <p className="text-gray-50">
               Didn’t find the answer you are looking for?{" "}
               <a
-                href="#"
+                href="/contact"
                 title=""
-                className="text-yellow-300 transition-all duration-200 hover:text-yellow-400 focus:text-yellow-400 hover:underline"
+                className="text-blue-300 transition-all duration-200 focus:underline hover:underline"
               >
-                Contact our support
+                Contact me
               </a>
             </p>
           </div>

@@ -2,9 +2,10 @@ import { Link } from "react-router-dom"
 import Navbar from "../Navbar"
 
 const MainSection = () => {
+    const mainImage = 'assets/image/extern1.webp'
     const airbnbURL = 'https://www.airbnb.ca/rooms/1160767419216237462';
     return (
-        <section className="bg-white mb-20 md:mb-52 xl:mb-72">
+        <section className="mt-[106px] lg:mt-0 bg-white mb-20 md:mb-52 xl:mb-72">
             <div className="container max-w-screen-xl mx-auto px-4">
                 <Navbar />
                 <div className="flex items-center justify-center xl:justify-start xl:max-w-[55%]">
@@ -30,7 +31,7 @@ const MainSection = () => {
                     <div className="hidden xl:block xl:absolute z-0 top-0 right-0 overflow-hidden rounded-bl-3xl w-[708px] h-[800px] xl:max-w-[45%]">
                         <img
                             alt="Home img"
-                            src="assets/image/extern1.webp"
+                            src={mainImage}
                             className="object-cover w-full h-full"
                         />
                     </div>

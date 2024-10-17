@@ -25,8 +25,8 @@ const InfoSection = () => {
         },
     ]
     return (
-        <section className="bg-white py-10 md:py-16 xl:relative">
-            <div className="container max-w-screen-xl mx-auto px-4">
+        <section className="bg-white py-10 px-4 md:py-16 xl:relative">
+            <div className="container max-w-screen-xl mx-auto">
                 <div className="flex flex-col xl:flex-row justify-end">
                     <div className="hidden xl:block xl:absolute left-0 bottom-0 rounded-tr-3xl rounded-br-3xl overflow-hidden w-[650px] h-[798px] xl:max-w-[45%]">
                         <img

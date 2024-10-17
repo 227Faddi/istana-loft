@@ -39,8 +39,8 @@ const GallerySection = () => {
     )
 
     return (
-        <section className="bg-white py-10 md:py-16" id='gallery'>
-            <div className="container max-w-screen-xl mx-auto px-4">
+        <section className="bg-white px-4 py-10 md:py-16" id='gallery'>
+            <div className="container max-w-screen-xl mx-auto">
                 <p className="font-normal text-gray-400 text-lg md:text-xl text-center uppercase mb-6">
                     Gallery
                 </p>
@@ -53,10 +53,10 @@ const GallerySection = () => {
                     selectedTabClassName="bg-gray-200 selected-tab"
                 >
                     <TabList className="flex items-center justify-center text-center space-x-10 lg:space-x-20 mb-12">
-                        <Tab className="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500">
+                        <Tab className="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500 cursor-pointer">
                             Exterior
                         </Tab>
-                        <Tab className="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500">
+                        <Tab className="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500 cursor-pointer">
                             Interior
                         </Tab>
                     </TabList>

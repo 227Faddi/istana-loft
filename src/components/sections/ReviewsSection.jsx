@@ -26,7 +26,7 @@ const ReviewsSection = () => {
                     <br />
                     {' '}Are Saying
                 </h1>
-                <div className='flex flex-col md:flex-row gap-10'>
+                <div className='flex flex-col lg:flex-row gap-10'>
                     { content.map((item, index) =>(
                         <ReviewCard
                             key={index}

@@ -1,7 +1,18 @@
-import { Link } from "react-router-dom"
+import { useRef } from "react"
+import { useInView } from "framer-motion"
 import Navbar from "../Navbar"
 
 const MainSection = () => {
+
+    const animationTarget = useRef(null)
+    const isInView = useInView(animationTarget,  { once: true })
+
+    const animation = {
+        transform: isInView ? "none" : "translateX(-200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+    }
+
     const mainImage = 'assets/image/extern1.webp'
     const airbnbURL = 'https://www.airbnb.ca/rooms/1160767419216237462';
     return (
@@ -9,7 +20,11 @@ const MainSection = () => {
             <div className="container max-w-screen-xl mx-auto px-4">
                 <Navbar />
                 <div className="flex items-center justify-center xl:justify-start xl:max-w-[55%]">
-                    <div className="mt-28 text-center xl:text-left">
+                    <div 
+                        ref={animationTarget}
+                        style={animation} 
+                        className="mt-28 text-center xl:text-left"
+                    >
                         <h1 className="font-semibold text-4xl md:text-6xl lg:text-7xl text-gray-900 leading-normal mb-6 italic">
                             Discover Your Perfect{' '}
                             <br />
@@ -23,7 +38,7 @@ const MainSection = () => {
                         <a
                             href={airbnbURL}
                             target="_blank"
-                            className='px-5 py-3 border-2 hover:border-green-700 rounded-lg font-semibold hover:text-green-700 hover:bg-white text-lg bg-green-700 text-white transition ease-linear duration-500'
+                            className='px-5 py-3 border-2 hover:border-green-700 rounded-lg font-semibold hover:text-green-700 hover:bg-white text-lg bg-green-700 text-white animation ease-linear duration-500'
                         >
                             Reserve Your Stay
                         </a>

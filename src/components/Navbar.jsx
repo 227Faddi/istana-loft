@@ -29,6 +29,7 @@ const Navbar = () => {
                 </Link>
                 <button
                     onClick={toggleNavBar}
+                    aria-label={navOpen ? "Close navigation menu" : "Open navigation menu"}
                     className="lg:hidden w-10 h-10 ml-auto flex items-center justify-center text-green-700 border border-green-700 rounded-md"
                 >
                     <IoMenu size={25}/>

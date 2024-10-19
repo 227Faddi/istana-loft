@@ -7,6 +7,16 @@ import { useInView } from "framer-motion"
 
 
 const InfoSection = () => {
+
+    const animationTarget = useRef(null)
+    const isInView = useInView(animationTarget, { once: true })
+
+    const animation = {
+        transform: isInView ? "none" : "translateX(200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+    }
+
     const content = [
         {
             icon: <FaKey size={25} />,
@@ -28,14 +38,6 @@ const InfoSection = () => {
         },
     ]
 
-
-    const ref = useRef(null)
-    const isInView = useInView(ref)
-
-    useEffect(() => {
-        console.log("Element is in view: ", isInView)
-    }, [isInView])
-  
     return (
         <section className="bg-white py-10 px-4 md:py-16 xl:relative">
             <div className="container max-w-screen-xl mx-auto">
@@ -47,18 +49,22 @@ const InfoSection = () => {
                             className="object-cover w-full h-full"
                         />
                     </div>
-                    <div className="flex flex-col items-center xl:max-w-[55%]">
-                        <h1 className="font-semibold text-gray-900 text-xl md:text-4xl text-center leading-normal mb-6 italic">
+                    <div 
+                        className="flex flex-col items-center xl:max-w-[55%]"
+                        ref={animationTarget}
+                        style={animation}
+                    >
+                        <h2 className="font-semibold text-gray-900 text-xl md:text-4xl text-center leading-normal mb-6 italic">
                             Everything You Need for{' '}
                             <br />
                             {' '}a Perfect Stay
-                        </h1>
+                        </h2>
                         <p className="font-normal text-gray-600 text-md md:text-xl text-center mb-16">
                             Inspired by Bali’s relaxed vibes, located on the hill{' '}
                             <br />
                             {' '}just above the enchanting beach of Porto Istana.
                         </p>
-                        <div ref={ref}>
+                        <div>
                             { content.map((item, index) =>(
                                 <InfoItem
                                     key={index}

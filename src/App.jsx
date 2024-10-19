@@ -3,6 +3,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import HomePage from "./pages/HomePage"
 import ContactPage from "./pages/ContactPage"
 import NotFoundPage from './pages/NotFoundPage';
+import './index.css';
 
 function App() {
   const router = createBrowserRouter(

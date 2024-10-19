@@ -4,16 +4,16 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  
   theme: {
     extend: {
       fontFamily: {
-        'Poppins': ['Poppins', 'sans-serif'],  
+        'Poppins': ['Poppins', 'sans-serif'],
       },
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
     },
   },
-
   plugins: [],
 }

@@ -1,8 +1,35 @@
 import { FaStar } from "react-icons/fa"
+import { motion } from "framer-motion"
 
-const ReviewCard = ({ author, comment, photo}) => {
+const ReviewCard = ({ author, comment, photo, index}) => {
+
+    const key = index
+
+    const variants = {
+        initial: {
+          opacity: 0,
+          y: 100
+        },
+        animate: (y) => ({
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 0.1 * key,
+          }
+        })
+    }
+
     return (
-        <div className="flex flex-col justify-between rounded-3xl border-2 border-neutral-800 bg-white text-gray-700 p-8 shadow-sm max-w-sm mx-auto">
+        <motion.div 
+            className="flex flex-col justify-between rounded-3xl border-2 border-neutral-800 bg-white text-gray-700 p-8 shadow-sm max-w-sm mx-auto"
+            variants={variants}
+            initial='initial'
+            whileInView='animate'
+            viewport={{
+            once: true,
+            }}
+            custom={index}
+        >
             <div className=" flex gap-2">
                 <FaStar className="text-green-700" />
                 <FaStar className="text-green-700" />
@@ -33,7 +60,7 @@ const ReviewCard = ({ author, comment, photo}) => {
                     </a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -24,11 +24,11 @@ const ReviewsSection = () => {
                 <p className="font-normal text-gray-600 text-lg md:text-xl text-center uppercase mb-6">
                     Reviews
                 </p>
-                <h1 className="font-semibold text-gray-900 text-2xl md:text-4xl text-center leading-normal mb-14 italic">
+                <h2 className="font-semibold text-gray-900 text-2xl md:text-4xl text-center leading-normal mb-14 italic">
                     What Our Guests{' '}
                     <br />
                     {' '}Are Saying
-                </h1>
+                </h2>
                 <div className='flex flex-col lg:flex-row gap-10'>
                     { content.map((item, index) =>(
                         <ReviewCard
@@ -36,6 +36,7 @@ const ReviewsSection = () => {
                             author={item.author}
                             comment={item.comment}
                             photo={item.photo}
+                            index={index}
                         />
                     ))}
                 </div>

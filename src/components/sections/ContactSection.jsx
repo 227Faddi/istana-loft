@@ -10,9 +10,9 @@ const ContactSection = () => {
         <section className="bg-white py-6 mt-[106px] lg:mt-0" id='contact'>
             <div className="container max-w-screen-xl mx-auto px-4 xl:relative">
                 <div className='bg-green-800 rounded-3xl py-14 px-6'>
-                    <h2 className='text-center text-white font-semibold text-4xl mb-8'>
+                    <h1 className='text-center text-white font-semibold text-4xl mb-8'>
                         Get in Touch with Giulio
-                    </h2>
+                    </h1>
                     <div className="flex flex-col lg:flex-row items-center justify-evenly">
                         <div className="text-center lg:text-left mb-10 lg:mb-0">
                             <div className="max-w-sm mx-auto overflow-hidden bg-white shadow-lg rounded-3xl">
@@ -32,11 +32,11 @@ const ContactSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="max-w-64 sm:max-w-full sm:w-96 bg-white px-6 py-3 rounded-3xl">
+                        <div className="max-w-[384px] sm:max-w-full sm:w-96 bg-white px-6 py-3 rounded-3xl">
                             <div className="py-3">
-                                <h3 className="font-semibold text-gray-900 text-3xl text-center">
+                                <h2 className="font-semibold text-gray-900 text-3xl text-center">
                                     Have questions or need assistance?
-                                </h3>
+                                </h2>
                             </div>
                             <div className="py-3">
                                 <input

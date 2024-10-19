@@ -10,13 +10,15 @@ const Footer = () => {
                     <div className="flex space-x-10 justify-center items-center mt-14">
                         <a
                             href="#"
-                            className="block  text-gray-900 transition-all duration-500 hover:text-green-700 "
+                            className="block  text-gray-900 transition-all duration-500 hover:text-green-700"
+                            aria-label="Visit our Facebook page"
                         >
                             <FaFacebookSquare className="text-4xl"/>
                         </a>
                         <a
                             href="#"
-                            className="block  text-gray-900 transition-all duration-500 hover:text-green-700 "
+                            className="block  text-gray-900 transition-all duration-500 hover:text-green-700"
+                            aria-label="Visit our Instagram page"
                         >
                             <FaInstagram className="text-4xl"/>
                         </a>
@@ -53,7 +55,13 @@ const Footer = () => {
                             © Istana Loft 2024, All rights reserved.
                         </span>
                         <span className="text-lg text-gray-600 text-center block">
-                            Develop by <a href="https://faliloukhouma.com/" className="text-green-700">Falilou</a>
+                            Develop by{' '}
+                            <a 
+                                href="https://faliloukhouma.com/" 
+                                className="text-green-700 hover:text-green-900 transition duration-300 underline"
+                            >
+                                Falilou
+                            </a>
                         </span>
                     </div>
                 </div>

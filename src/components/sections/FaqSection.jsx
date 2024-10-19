@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
 import FaqItem from "../FaqItem"
+import { animateMini, motion } from "framer-motion"
 
 const FaqSection = () => {
   const content = [
@@ -38,6 +38,7 @@ const FaqSection = () => {
               key={index} 
               title={item.title} 
               text={item.text}
+              index={index}
             />
           ))}
         </div>

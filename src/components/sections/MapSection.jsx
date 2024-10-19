@@ -17,6 +17,7 @@ const Map = () => {
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        title="Map showing the location of Porto Istana beach"
       />
     </section>
   )

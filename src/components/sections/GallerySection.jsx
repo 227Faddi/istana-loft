@@ -44,9 +44,9 @@ const GallerySection = () => {
                 <p className="font-normal text-gray-600 text-lg md:text-xl text-center uppercase mb-6">
                     Gallery
                 </p>
-                <h1 className="font-semibold text-gray-900 text-4xl text-center mb-10 italic">
+                <h2 className="font-semibold text-gray-900 text-4xl text-center mb-10 italic">
                     Step Into Paradise
-                </h1>
+                </h2>
                 <Tabs       
                     selectedIndex={selectedIndex}
                     onSelect={(index) => setSelectedIndex(index)}

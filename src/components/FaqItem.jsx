@@ -1,6 +1,33 @@
-const FaqItem = ({ title, text }) => {
+import { motion } from "framer-motion"
+const FaqItem = ({ title, text, index }) => {
+
+    const key = index
+
+    const variants = {
+        initial: {
+          opacity: 0,
+          y: 100
+        },
+        animate: (y) => ({
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 0.1 * key,
+          }
+        })
+    }
+
     return (
-        <div className="flex items-start">
+        <motion.div 
+            className="flex items-start"
+            variants={variants}
+            initial='initial'
+            whileInView='animate'
+            viewport={{
+              once: true,
+            }}
+            custom={index}
+        >
             <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-green-700 rounded-full">
                 <span className="text-lg font-semibold text-white">?</span>
             </div>
@@ -12,7 +39,7 @@ const FaqItem = ({ title, text }) => {
                     {text}
                 </p>
             </div>
-        </div>
+        </motion.div>
     ) 
 }
 

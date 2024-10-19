@@ -10,7 +10,7 @@ const InfoItem = ({ icon, title, text1, text2}) => {
                 <h4 className="font-semibold text-gray-900 text-2xl mb-2">
                     {title}
                 </h4>
-                <p className="font-normal text-gray-400 text-xl leading-relaxed">
+                <p className="font-normal text-gray-600 text-xl leading-relaxed">
                     {text1}{' '}
                     <br />
                     {' '}{text2}

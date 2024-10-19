@@ -8,7 +8,7 @@ const FaqItem = ({ title, text }) => {
                 <p className="text-xl font-semibold">
                     {title}
                 </p>
-                <p className="mt-4 text-base text-gray-400">
+                <p className="mt-4 text-base text-gray-600">
                     {text}
                 </p>
             </div>

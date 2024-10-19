@@ -5,7 +5,7 @@ const Map = () => {
       className='flex flex-col items-center px-4 py-10 md:py-16 h-[600px] md:h-[800px]'
       id="map"
     >
-      <p className="font-normal text-gray-400 text-lg md:text-xl text-center uppercase mb-6">
+      <p className="font-normal text-gray-600 text-lg md:text-xl text-center uppercase mb-6">
         Location
       </p>
       <h2 className="font-semibold text-gray-900 text-2xl md:text-4xl text-center leading-normal mb-14 italic">

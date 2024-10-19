@@ -15,7 +15,7 @@ const MainSection = () => {
                             <br />
                             {' '}Coastal Retreat
                         </h1>
-                        <p className="font-normal text-xl text-gray-400 leading-relaxed mb-12">
+                        <p className="font-normal text-xl text-gray-600 leading-relaxed mb-12">
                             With a combines style and comfort, ensuring{' '}
                             <br />
                             {' '}a cozy and rejuvenating stay in Sardinia's coastal paradise.

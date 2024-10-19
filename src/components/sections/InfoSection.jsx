@@ -2,6 +2,9 @@ import { LuHeartHandshake } from "react-icons/lu";
 import { FaKey } from "react-icons/fa";
 import { TbBeach } from "react-icons/tb";
 import InfoItem from "../InfoItem";
+import { useRef, useEffect } from "react";
+import { useInView } from "framer-motion"
+
 
 const InfoSection = () => {
     const content = [
@@ -24,6 +27,15 @@ const InfoSection = () => {
             text2: 'outdoor showers, and essentials',
         },
     ]
+
+
+    const ref = useRef(null)
+    const isInView = useInView(ref)
+
+    useEffect(() => {
+        console.log("Element is in view: ", isInView)
+    }, [isInView])
+  
     return (
         <section className="bg-white py-10 px-4 md:py-16 xl:relative">
             <div className="container max-w-screen-xl mx-auto">
@@ -41,12 +53,12 @@ const InfoSection = () => {
                             <br />
                             {' '}a Perfect Stay
                         </h1>
-                        <p className="font-normal text-gray-400 text-md md:text-xl text-center mb-16">
+                        <p className="font-normal text-gray-600 text-md md:text-xl text-center mb-16">
                             Inspired by Bali’s relaxed vibes, located on the hill{' '}
                             <br />
                             {' '}just above the enchanting beach of Porto Istana.
                         </p>
-                        <div>
+                        <div ref={ref}>
                             { content.map((item, index) =>(
                                 <InfoItem
                                     key={index}

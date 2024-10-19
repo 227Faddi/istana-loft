@@ -10,7 +10,10 @@ const ContactPage = () => {
 
     return (
         <>
-            <div
+            <div className="xl:px-32">
+                <Navbar />  
+            </div>
+            {/* <div
                 className="flex flex-col sm:flex-row justify-between items-center py-8 sm:px-40 lg:px-64"
             >
                 <div className="flex items-center justify-between">
@@ -28,7 +31,7 @@ const ContactPage = () => {
                 >
                     Book Now
                 </a>
-            </div>
+            </div> */}
             <ContactSection />
             <Footer />
         </>

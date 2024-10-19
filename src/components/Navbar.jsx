@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const transition = ''
 
-    const linkClass = 'font-semibold text-gray-900 text-lg hover:text-gray-400 mb-5 lg:mb-0'
+    const linkClass = 'font-semibold text-gray-900 text-lg hover:text-green-700 mb-5 lg:mb-0'
 
     return (
         <nav
@@ -42,24 +42,24 @@ const Navbar = () => {
                 }
             >
                 <li className={linkClass}>
-                    <a href="#gallery">
+                    <Link to="/#gallery">
                         Photos
-                    </a>
+                    </Link>
                 </li>
                 <li className={linkClass}>
-                    <a href="#reviews">
+                    <Link to="/#reviews">
                         Reviews
-                    </a>
+                    </Link>
                 </li>
                 <li className={linkClass}>
-                    <a href="#map">
+                    <Link to="/#map">
                         Location
-                    </a>
+                    </Link>
                 </li>
                 <li className={linkClass}>
-                    <a href="#faq">
+                    <Link to="/#faq">
                         FAQ
-                    </a>
+                    </Link>
                 </li>
                 <li className={linkClass}>
                     <Link to="/contact">

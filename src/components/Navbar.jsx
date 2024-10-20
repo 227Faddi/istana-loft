@@ -2,17 +2,15 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { GiWaveSurfer } from "react-icons/gi";
 import { IoMenu } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
 
 const Navbar = () => {
+    const { t } = useTranslation();
     const [ navOpen, setNavOpen ] = useState(false);
     const toggleNavBar = () =>{
         setNavOpen((n) => !navOpen)
     }
-
-    const airbnbURL = 'https://www.airbnb.ca/rooms/1160767419216237462';
-
-    const transition = ''
-
     const linkClass = 'font-semibold text-gray-900 text-lg hover:text-green-700 mb-5 lg:mb-0'
 
     return (
@@ -44,17 +42,17 @@ const Navbar = () => {
             >
                 <li className={linkClass}>
                     <Link to="/#gallery">
-                        Photos
+                        {t('photos')}
                     </Link>
                 </li>
                 <li className={linkClass}>
                     <Link to="/#reviews">
-                        Reviews
+                        {t('reviews')}
                     </Link>
                 </li>
                 <li className={linkClass}>
                     <Link to="/#map">
-                        Location
+                        {t('location')}
                     </Link>
                 </li>
                 <li className={linkClass}>
@@ -64,8 +62,13 @@ const Navbar = () => {
                 </li>
                 <li className={linkClass}>
                     <Link to="/contact">
-                        Contact
+                        {t('contact')}
                     </Link>
+                </li>
+                <li>
+                    <button onClick={console.log('hey')} className={linkClass}>
+                        {t('otherLng')}
+                    </button>
                 </li>
             </ul>
             <a
@@ -76,7 +79,7 @@ const Navbar = () => {
                     ${navOpen === false && 'hidden lg:block'}`
                 }
             >
-                Book Now
+                {t('book')}
             </a>
         </nav>
     )

@@ -7,6 +7,8 @@ import Footer from '../components/Footer'
 import FaqSection from '../components/sections/FaqSection'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import { Helmet } from "react-helmet";
+const clientUrl = import.meta.env.VITE_CLIENT_URL;
 
 const HomePage = () => {
     const location = useLocation();
@@ -22,6 +24,15 @@ const HomePage = () => {
 
     return (
         <>
+            <Helmet>
+                <meta charSet="UTF-8" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+                <meta name="description" content="Istana Loft - Airbnb rental" />
+                <meta name="keywords" content="Istana Loft - Airbnb rental" />
+                <title> Istana Loft - Home </title>
+                <link rel="canonical" href={clientUrl} />
+            </Helmet>
             <MainSection />
             <InfoSection />
             <GallerySection />

@@ -2,12 +2,14 @@ import { LuHeartHandshake } from "react-icons/lu";
 import { FaKey } from "react-icons/fa";
 import { TbBeach } from "react-icons/tb";
 import InfoItem from "../InfoItem";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { useInView } from "framer-motion"
+import { useTranslation } from "react-i18next";
 
 
 const InfoSection = () => {
 
+    const { t } = useTranslation();
     const animationTarget = useRef(null)
     const isInView = useInView(animationTarget, { once: true })
 
@@ -20,21 +22,21 @@ const InfoSection = () => {
     const content = [
         {
             icon: <FaKey size={25} />,
-            title: 'Self check-in',
-            text1: 'Enjoy quick and easy arrivals with our simple',
-            text2: 'self check-in process.',
+            title: t('checkIn'),
+            text1: t('checkInText1'),
+            text2: t('checkInText2'),
         },
         {
             icon: <TbBeach size={25} />,
-            title: 'Just a Step from the Beach',
-            text1: 'Enjoy easy access to the wonderful',
-            text2: 'Porto Istana beach.',
+            title: t('beach'),
+            text1: t('beachText1'),
+            text2: t('beachText2'),
         },
         {
             icon: <LuHeartHandshake size={25} />,
-            title: 'Relax in Comfort',
-            text1: 'Perfect for two, it features a double bed, indoor and',
-            text2: 'outdoor showers, and essentials',
+            title: t('relax'),
+            text1: t('relaxText1'),
+            text2: t('relaxText2'),
         },
     ]
 
@@ -55,14 +57,14 @@ const InfoSection = () => {
                         style={animation}
                     >
                         <h2 className="font-semibold text-gray-900 text-xl md:text-4xl text-center leading-normal mb-6 italic">
-                            Everything You Need for{' '}
+                            {t('infoTitle1')}{' '}
                             <br />
-                            {' '}a Perfect Stay
+                            {' '}{t('infoTitle2')}
                         </h2>
                         <p className="font-normal text-gray-600 text-md md:text-xl text-center mb-16">
-                            Inspired by Bali’s relaxed vibes, located on the hill{' '}
+                            {t('infoSubTitle1')}{' '}
                             <br />
-                            {' '}just above the enchanting beach of Porto Istana.
+                            {' '}{t('infoSubTitle2')}
                         </p>
                         <div>
                             { content.map((item, index) =>(

@@ -1,23 +1,25 @@
 import FaqItem from "../FaqItem"
-import { animateMini, motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 const FaqSection = () => {
+
+  const { t } = useTranslation();
   const content = [
     {
-      title: 'What amenities are included?',
-      text: `The property includes air conditioning, free WiFi, a hair dryer, in and outdoor shower, hot water, shower gel, cotton linens, hangers, a Klarstein refrigerator, and an espresso machine.`
+      title: t('faqItem1Title'),
+      text: t('faqItem1Text')
     },
     {
-      title: 'Is there public transportation nearby?',
-      text: `Yes, buses run from Porto Istana to Olbia, but they are infrequent. For a better beach experience along the coast, we recommend renting a car.`
+      title: t('faqItem2Title'),
+      text: t('faqItem2Text')
     },
     {
-      title: 'How can I make a reservation?',
-      text: `To make a reservation, simply visit our listing on the Airbnb site. Select your desired dates, check availability, and follow the prompts to complete your booking.`
+      title: t('faqItem3Title'),
+      text: t('faqItem3Text')
     },
     {
-      title: 'How far is the beach from the loft?',
-      text: `It’s approximately a 16-minute walk or a 4-minute drive. We're also planning to offer electric bikes for a more convenient ride!`
+      title: t('faqItem4Title'),
+      text: t('faqItem4Text')
     },
   ]
 
@@ -28,8 +30,8 @@ const FaqSection = () => {
           <p className="font-normal text-gray-600 text-lg md:text-xl text-center uppercase mb-6">
             FAQ
           </p>
-          <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-            Questions &amp; Answers
+          <h2 className="text-3xl font-bold leading-tight sm:text-4xl italic">
+            {t('faqTitle')}
           </h2>
         </div>
         <div className="grid grid-cols-1 mt-12 md:mt-20 md:grid-cols-2 gap-y-16 gap-x-20">
@@ -45,13 +47,13 @@ const FaqSection = () => {
         <div className="flex items-center justify-center mt-12 md:mt-20">
           <div className="px-8 py-4 text-center bg-green-700 rounded-full">
             <p className="text-gray-50">
-              Didn’t find the answer you are looking for?{" "}
+              {t('faqContact')}{" "}
               <a
                 href="/contact"
                 title=""
                 className="underline"
               >
-                Contact Us!
+                {t('contactUs')}
               </a>
             </p>
           </div>

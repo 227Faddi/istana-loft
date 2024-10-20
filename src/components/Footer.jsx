@@ -1,8 +1,12 @@
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
 
 const Footer = () => {
+    const { t } = useTranslation();
+
     return (
         <footer className="w-full py-14">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -26,17 +30,17 @@ const Footer = () => {
                     <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
                         <li>
                             <Link to="/#gallery" className="text-gray-800 hover:text-green-700">
-                                Photos
+                                {t('photos')}
                             </Link>
                         </li>
                         <li>
                             <Link to="/#reviews" className=" text-gray-800 hover:text-green-700">
-                                Reviews
+                                {t('reviews')}
                             </Link>
                         </li>
                         <li>
                             <Link to="/#map" className=" text-gray-800 hover:text-green-700">
-                                Location
+                                {t('location')}
                             </Link>
                         </li>
                         <li>
@@ -46,16 +50,30 @@ const Footer = () => {
                         </li>
                         <li>
                             <Link to="/contact" className=" text-gray-800 hover:text-green-700">
-                                Contact
+                                {t('contact')}
                             </Link>
+                        </li>
+                        <li>
+                            <a 
+                                href={airbnbURL} 
+                                target="_blank"
+                                className="text-gray-800 hover:text-green-700"
+                            >
+                                {t('book')}
+                            </a>
+                        </li>
+                        <li>
+                            <button onClick={console.log('hey')} className="text-gray-800 hover:text-green-700">
+                                {t('otherLng')}
+                            </button>
                         </li>
                     </ul>
                     <div className="flex flex-col sm:flex-row justify-between">
                         <span className="text-lg text-gray-600 text-center block">
-                            © Istana Loft 2024, All rights reserved.
+                            {t('rights')}
                         </span>
                         <span className="text-lg text-gray-600 text-center block">
-                            Develop by{' '}
+                            {t('develop')}{' '}
                             <a 
                                 href="https://faliloukhouma.com/" 
                                 className="text-green-700 hover:text-green-900 transition duration-300 underline"

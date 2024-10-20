@@ -1,7 +1,9 @@
 import { FaStar } from "react-icons/fa"
 import { motion } from "framer-motion"
+const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
 
-const ReviewCard = ({ author, comment, photo, index}) => {
+
+const ReviewCard = ({ author, comment, photo, from, index}) => {
 
     const key = index
 
@@ -55,8 +57,12 @@ const ReviewCard = ({ author, comment, photo, index}) => {
                     <p className="leading-relaxed tracking-wide text-black-200">
                         {author}
                     </p>
-                    <a href="https://www.airbnb.ca/rooms/1160767419216237462/reviews" className="text-xs leading-relaxed tracking-wide text-green-700">
-                        From Airbnb
+                    <a 
+                        href={`${airbnbURL}/reviews`}
+                        className="text-xs leading-relaxed tracking-wide text-green-700"
+                        target="_blank"
+                    >
+                        {from}
                     </a>
                 </div>
             </div>

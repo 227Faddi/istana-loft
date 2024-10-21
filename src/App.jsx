@@ -3,6 +3,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import HomePage from "./pages/HomePage"
 import ContactPage from "./pages/ContactPage"
 import NotFoundPage from './pages/NotFoundPage';
+import FormSuccessPage from './pages/formSuccessPage';
 import './index.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <>
         <Route path='/' element={<HomePage />}/>
         <Route path='/contact' element={<ContactPage />}/>
+        <Route path='/form/success' element={<FormSuccessPage />}/>
         <Route path='*' element={<NotFoundPage />}/>
       </>
     )

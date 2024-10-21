@@ -5,7 +5,12 @@ import { useTranslation } from "react-i18next";
 const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
 
 const Footer = () => {
-    const { t } = useTranslation();
+
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng.toLowerCase())
+    }
 
     return (
         <footer className="w-full py-14">
@@ -63,7 +68,7 @@ const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <button onClick={console.log('hey')} className="text-gray-800 hover:text-green-700">
+                            <button onClick={() => changeLanguage(t('otherLng'))} className="text-gray-800 hover:text-green-700">
                                 {t('otherLng')}
                             </button>
                         </li>

@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import LngDetector from 'i18next-browser-languagedetector';
 import enLocales from "./locales/en/en.json";
 import itLocales from "./locales/it/it.json";
 
@@ -72,7 +73,10 @@ const resources = {
 
       pageNotFound: "Page not found",
       pageNotFoundMessage: "Sorry, we couldn’t find the page you’re looking for.",
-      pageNotFoundButton: "Go Back to the Homepage",
+      homePageButton: "Go Back to the Homepage",
+
+      formSuccess: "Thank you for reaching out!",
+      formSuccessMessage: "Giulio will get back to you shortly.",
     }
   },
   it: {
@@ -139,17 +143,22 @@ const resources = {
 
       pageNotFound: "Pagina non trovata",
       pageNotFoundMessage: "Spiacenti, non siamo riusciti a trovare la pagina che stai cercando.",
-      pageNotFoundButton: "Torna alla Homepage",
+      homePageButton: "Torna alla Homepage",
+
+      formSuccess: "Grazie per averci contattato!",
+      formSuccessMessage: "Giulio ti risponderà a breve.",
     }
   }
 };
 
 i18n
+  .use(LngDetector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
+    debug:true,
     resources,
     fallbackLng: "en",
-    lng: "it", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+    // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
     // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
     // if you're using a language detector, do not define the lng option
 

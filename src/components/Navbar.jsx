@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { GiWaveSurfer } from "react-icons/gi";
 import { IoMenu } from "react-icons/io5";
@@ -6,12 +6,17 @@ import { useTranslation } from "react-i18next";
 const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
 
 const Navbar = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const navigate = useNavigate();
     const [ navOpen, setNavOpen ] = useState(false);
     const toggleNavBar = () =>{
         setNavOpen((n) => !navOpen)
     }
     const linkClass = 'font-semibold text-gray-900 text-lg hover:text-green-700 mb-5 lg:mb-0'
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng.toLowerCase())
+    }
 
     return (
         <nav
@@ -66,7 +71,7 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <button onClick={console.log('hey')} className={linkClass}>
+                    <button onClick={() => changeLanguage(t('otherLng'))} className={linkClass}>
                         {t('otherLng')}
                     </button>
                 </li>

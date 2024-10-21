@@ -41,7 +41,9 @@ const ContactSection = () => {
                         </div>
                         <form 
                             className="max-w-[384px] sm:max-w-full sm:w-96 bg-white px-6 py-3 rounded-3xl"
-                            name="contact" method="POST"
+                            name="contact" 
+                            method="POST"
+                            action="/form-success"
                         >
                             <input type="hidden" name="form-name" value="contact" />
                             <div className="py-3">

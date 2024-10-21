@@ -79,7 +79,7 @@ const Navbar = () => {
                     ${navOpen === false && 'hidden lg:block'}`
                 }
             >
-                {t('book')}
+                {t('bookNow')}
             </a>
         </nav>
     )

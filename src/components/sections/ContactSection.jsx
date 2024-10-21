@@ -1,8 +1,13 @@
 import { useTranslation } from "react-i18next"
+import { useState } from "react";
 
 const ContactSection = () => {
 
     const { t } = useTranslation(); 
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
     
     return (
         <section className="bg-white py-6 mt-[106px] lg:mt-0" id='contact'>
@@ -34,7 +39,11 @@ const ContactSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="max-w-[384px] sm:max-w-full sm:w-96 bg-white px-6 py-3 rounded-3xl">
+                        <form 
+                            className="max-w-[384px] sm:max-w-full sm:w-96 bg-white px-6 py-3 rounded-3xl"
+                            name="contact" method="POST"
+                        >
+                            <input type="hidden" name="form-name" value="contact" />
                             <div className="py-3">
                                 <h2 className="font-semibold text-gray-900 text-3xl text-center">
                                     {t('contactSubTitle')}
@@ -42,33 +51,42 @@ const ContactSection = () => {
                             </div>
                             <div className="py-3">
                                 <input
-                                    name="fullName"
+                                    name="name"
                                     className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
-                                    placeholder={t('contactFullName')}
+                                    placeholder={t('formName')}
                                     type="text"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                 />
                             </div>
                             <div className="py-3">
                                 <input
                                     name="email"
                                     className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
-                                    placeholder={t('contactEmail')}
+                                    placeholder={t('formEmail')}
                                     type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
                             <div className="py-3">
                                 <textarea
                                     name="message"
                                     className="px-4 py-4 w-full bg-gray-100 font-normal text-lg placeholder-gray-400 rounded-xl outline-none"
-                                    placeholder={t('contactMessage')}
+                                    placeholder={t('formMessage')}
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                 />
                             </div>
                             <div className="py-3">
-                                <button className="w-full py-4 font-semibold text-lg text-white bg-green-700 rounded-xl hover:bg-green-900 transition ease-in-out duration-500">
+                                <button 
+                                    className="w-full py-4 font-semibold text-lg text-white bg-green-700 rounded-xl hover:bg-green-900 transition ease-in-out duration-500"
+                                    type="submit"
+                                >
                                     {t('submit')}
                                 </button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -65,10 +65,14 @@ const resources = {
       contactRole: "Owner",
       contactBio: "My name is Giulio, and I’m an anaesthetist based in Olbia, on the beautiful island of Sardinia. I work in a hospital and air rescue services, and I have a great passion for surfing, sailing, climbing, and alpine skiing. With my friends, I explore the island in search of the best waves, traveling, and discovering new experiences.",
       contactSubTitle: "Have questions or need assistance?",
-      contactFullName: "Name",
-      contactEmail: "Email",
-      contactMessage: "Message",
-      submit: "Submit"
+      formName: "Name",
+      formEmail: "Email",
+      formMessage: "Message",
+      submit: "Submit",
+
+      pageNotFound: "Page not found",
+      pageNotFoundMessage: "Sorry, we couldn’t find the page you’re looking for.",
+      pageNotFoundButton: "Go Back to the Homepage",
     }
   },
   it: {
@@ -128,10 +132,14 @@ const resources = {
       contactRole: "Proprietario",
       contactBio: "Mi chiamo Giulio, sono un medico anestesista rianimatore a Olbia, nel nord della splendida Sardegna. Lavoro in ospedale e nel servizio di elisoccorso, e ho una grande passione per il surf, la vela, l'arrampicata e lo sci alpino. Con gli amici, esploro l'isola alla ricerca delle migliori onde, viaggiando e scoprendo nuove esperienze.",
       contactSubTitle: "Hai domande o hai bisogno di assistenza?",
-      contactFullName: "Nome",
-      contactEmail: "Email",
-      contactMessage: "Messaggio",
-      submit: "Invia"
+      formName: "Nome",
+      formEmail: "Email",
+      formMessage: "Messaggio",
+      submit: "Invia",
+
+      pageNotFound: "Pagina non trovata",
+      pageNotFoundMessage: "Spiacenti, non siamo riusciti a trovare la pagina che stai cercando.",
+      pageNotFoundButton: "Torna alla Homepage",
     }
   }
 };

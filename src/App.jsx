@@ -3,7 +3,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import HomePage from "./pages/HomePage"
 import ContactPage from "./pages/ContactPage"
 import NotFoundPage from './pages/NotFoundPage';
-import FormSuccessPage from './pages/formSuccessPage';
+import FormSuccessPage from './pages/FormSuccessPage.jsx';
 import './index.css';
 
 function App() {

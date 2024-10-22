@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { useState } from "react";
+const clientUrl = import.meta.env.VITE_CLIENT_URL;
 
 const ContactSection = () => {
 
@@ -43,7 +44,7 @@ const ContactSection = () => {
                             className="max-w-[384px] sm:max-w-full sm:w-96 bg-white px-6 py-3 rounded-3xl"
                             name="contact" 
                             method="POST"
-                            action="/form-success"
+                            action={`${clientUrl}/form-success`}
                         >
                             <input type="hidden" name="form-name" value="contact" />
                             <div className="py-3">

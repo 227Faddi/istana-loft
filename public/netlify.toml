@@ -1,5 +1,0 @@
-[[redirects]]
-# Redirect all requests to index.html (important for React Router)
-from = "/*"
-to = "/index.html"
-status = 200

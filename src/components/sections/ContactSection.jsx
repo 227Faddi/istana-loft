@@ -9,6 +9,23 @@ const ContactSection = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+      
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+      
+        try{
+            await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            navigate('/form-success')
+        } catch(err){
+            alert(err);
+        }
+    };
     
     return (
         <section className="bg-white py-6 mt-[106px] lg:mt-0" id='contact'>
@@ -44,7 +61,7 @@ const ContactSection = () => {
                             className="max-w-[384px] sm:max-w-full sm:w-96 bg-white px-6 py-3 rounded-3xl"
                             name="contact" 
                             method="POST"
-                            action="/form-success"
+                            onSubmit={handleSubmit}
                         >
                             <input type="hidden" name="form-name" value="contact" />
                             <div className="py-3">

@@ -19,7 +19,7 @@ const FormSuccessPage = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content="Istana Loft - Airbnb rental" />
                 <meta name="keywords" content="Istana Loft - Airbnb rental" />
-                <title> Istana Loft - Success </title>
+                <title> Istana Loft - Thank You! </title>
                 <link rel="canonical" href={clientUrl} />
             </Helmet>
             <div className="xl:px-32">

@@ -18,14 +18,16 @@ const Footer = () => {
                 <div className="max-w-3xl mx-auto">
                     <div className="flex space-x-10 justify-center items-center mt-14">
                         <a
-                            href="#"
+                            href="https://www.facebook.com/giulio.formicola"
+                            target="_blank"
                             className="block  text-gray-900 transition-all duration-500 hover:text-green-700"
                             aria-label="Visit our Facebook page"
                         >
                             <FaFacebookSquare className="text-4xl"/>
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/_libanes_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank"
                             className="block  text-gray-900 transition-all duration-500 hover:text-green-700"
                             aria-label="Visit our Instagram page"
                         >

@@ -41,7 +41,7 @@ const ContactSection = () => {
                                 <div className="relative">
                                     <img
                                         className="w-full h-48 object-cover"
-                                        src="https://a0.muscache.com/im/pictures/user/9c01e630-923c-4471-aedf-38dfe57c3cb5.jpg?im_w=240"
+                                        src="assets/image/contact-photo.webp"
                                         alt="Profile Image"
                                         loading="lazy"
                                     />
@@ -67,7 +67,7 @@ const ContactSection = () => {
                         >
                             <input type="hidden" name="form-name" value="contact" />
                             <div className="py-3">
-                                <h2 className="font-semibold text-gray-900 text-3xl text-center">
+                                <h2 className="text-gray-900 text-3xl text-center">
                                     {t('contactSubTitle')}
                                 </h2>
                             </div>

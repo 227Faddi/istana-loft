@@ -47,6 +47,7 @@ const ReviewCard = ({ author, comment, photo, from, index}) => {
                         <div className="relative inline-block overflow-hidden rounded-lg border-neutral-800 w-10 h-10">
                             <img
                                 alt="review card"
+                                loading="lazy"
                                 src={photo}
                                 className="inline-block object-cover w-full h-full"
                                 style={{ color: "transparent" }}
@@ -54,12 +55,12 @@ const ReviewCard = ({ author, comment, photo, from, index}) => {
                         </div>
                     </div>
                 <div>
-                    <p className="leading-relaxed tracking-wide text-black-200">
+                    <p className="leading-relaxed font-bold tracking-wide text-black-200">
                         {author}
                     </p>
                     <a 
                         href={`${airbnbURL}/reviews`}
-                        className="text-xs leading-relaxed tracking-wide text-green-700"
+                        className="text-xs font-bold leading-relaxed tracking-wide text-green-700"
                         target="_blank"
                     >
                         {from}

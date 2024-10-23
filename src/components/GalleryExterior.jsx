@@ -29,7 +29,7 @@ const GalleryExterior = ({ openLightbox }) => {
                     />
                 </div>
             </div>
-            <div className="md:col-span-8 md:w-[404px] lg:w-[277px] md:h-[840px] h-[404px] rounded-3xl">
+            <div className="md:col-span-8 md:w-[404px] lg:min-w-[277px] md:h-[840px] h-[404px] rounded-3xl">
                 <GalleryImage 
                     image='extern1.webp'
                     open={ openLightbox }

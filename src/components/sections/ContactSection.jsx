@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const clientUrl = import.meta.env.VITE_CLIENT_URL;
 
 const ContactSection = () => {
-
+    const navigate = useNavigate();
     const { t } = useTranslation(); 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');

@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import FaqSection from '../components/sections/FaqSection'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 const clientUrl = import.meta.env.VITE_CLIENT_URL;
 
 const HomePage = () => {
@@ -23,7 +23,7 @@ const HomePage = () => {
     }, [location]);
 
     return (
-        <>
+        <HelmetProvider>
             <Helmet>
                 <meta charSet="UTF-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -40,7 +40,7 @@ const HomePage = () => {
             <MapSection />
             <FaqSection />
             <Footer />
-        </>
+        </HelmetProvider>
     )
 }
 

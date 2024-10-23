@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar"
 import ContactSection from "../components/sections/ContactSection"
 import Footer from "../components/Footer"
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 const clientUrl = import.meta.env.VITE_CLIENT_URL;
 
 const ContactPage = () => {
     return (
-        <>
+        <HelmetProvider>
             <Helmet>
                 <meta charSet="UTF-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +21,7 @@ const ContactPage = () => {
             </div>
             <ContactSection />
             <Footer />
-        </>
+        </HelmetProvider>
     )
 }
 

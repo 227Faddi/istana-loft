@@ -1,0 +1,9 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Disallow:
+
+# Optionally, you can specify certain rules
+# To disallow specific paths, you can uncomment the lines below
+
+# Disallow: /form-success
+# Disallow: /some-other-path

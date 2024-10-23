@@ -40,9 +40,10 @@ const ContactSection = () => {
                             <div className="max-w-sm mx-auto overflow-hidden bg-white shadow-lg rounded-3xl">
                                 <div className="relative">
                                     <img
-                                    className="w-full h-48 object-cover"
-                                    src="https://a0.muscache.com/im/pictures/user/9c01e630-923c-4471-aedf-38dfe57c3cb5.jpg?im_w=240"
-                                    alt="Profile Image"
+                                        className="w-full h-48 object-cover"
+                                        src="https://a0.muscache.com/im/pictures/user/9c01e630-923c-4471-aedf-38dfe57c3cb5.jpg?im_w=240"
+                                        alt="Profile Image"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div className="px-6 py-4">

@@ -49,6 +49,7 @@ const MainSection = () => {
                         <img
                             alt="Home img"
                             src={mainImage}
+                            loading="lazy"
                             className="object-cover w-full h-full"
                         />
                     </div>

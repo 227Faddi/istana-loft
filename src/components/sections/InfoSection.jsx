@@ -48,7 +48,6 @@ const InfoSection = () => {
                         <img
                             alt="Feature img"
                             src="assets/image/info.webp"
-                            loading="lazy"
                             className="object-cover w-full h-full"
                         />
                     </div>

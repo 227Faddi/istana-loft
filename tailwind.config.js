@@ -8,11 +8,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'Poppins': ['Poppins', 'sans-serif'],
+        'Playwrite' : ["Playwrite GB S", 'cursive'],
       },
-    },
-    fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
     },
   },
   plugins: [],

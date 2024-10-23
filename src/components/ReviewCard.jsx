@@ -33,11 +33,11 @@ const ReviewCard = ({ author, comment, photo, from, index}) => {
             custom={index}
         >
             <div className=" flex gap-2">
-                <FaStar className="text-green-700" />
-                <FaStar className="text-green-700" />
-                <FaStar className="text-green-700" />
-                <FaStar className="text-green-700" />
-                <FaStar className="text-green-700" />
+                <FaStar className="text-yellow-300" />
+                <FaStar className="text-yellow-300" />
+                <FaStar className="text-yellow-300" />
+                <FaStar className="text-yellow-300" />
+                <FaStar className="text-yellow-300" />
             </div>
                 <p className="my-4 mb-0 text-base font-normal leading-relaxed tracking-wide">
                     {comment}

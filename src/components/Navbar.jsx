@@ -12,7 +12,7 @@ const Navbar = () => {
     const toggleNavBar = () =>{
         setNavOpen((n) => !navOpen)
     }
-    const linkClass = 'font-semibold text-gray-900 text-lg hover:text-green-700 mb-5 lg:mb-0'
+    const linkClass = 'text-gray-800 text-lg mb-5 lg:mb-0'
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng.toLowerCase())
@@ -25,8 +25,14 @@ const Navbar = () => {
         >
             <div className="flex items-center justify-between mb-0">
                 <Link to="/" className='flex text-3xl'>
-                    <GiWaveSurfer />
-                    <h2>
+                    <div className="w-[40px] h-[40px] mr-2">
+                        <img 
+                            src="assets/image/logo.webp" 
+                            className="object-cover w-full h-full"
+                            alt="istana loft logo" 
+                        />
+                    </div>
+                    <h2 className="hover:text-green-700 font-Playwrite">
                         Istana Loft
                     </h2>
                 </Link>

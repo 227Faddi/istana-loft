@@ -1,27 +1,26 @@
-import FaqItem from "../FaqItem"
-import { useTranslation } from "react-i18next"
+import FaqItem from '../FaqItem';
+import { useTranslation } from 'react-i18next';
 
 const FaqSection = () => {
-
   const { t } = useTranslation();
   const content = [
     {
       title: t('faqItem1Title'),
-      text: t('faqItem1Text')
+      text: t('faqItem1Text'),
     },
     {
       title: t('faqItem2Title'),
-      text: t('faqItem2Text')
+      text: t('faqItem2Text'),
     },
     {
       title: t('faqItem3Title'),
-      text: t('faqItem3Text')
+      text: t('faqItem3Text'),
     },
     {
       title: t('faqItem4Title'),
-      text: t('faqItem4Text')
+      text: t('faqItem4Text'),
     },
-  ]
+  ];
 
   return (
     <section className="py-10 px-4" id="faq">
@@ -35,10 +34,10 @@ const FaqSection = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 mt-12 md:mt-20 md:grid-cols-2 gap-y-16 gap-x-20">
-          {content.map((item, index) =>(
-            <FaqItem 
-              key={index} 
-              title={item.title} 
+          {content.map((item, index) => (
+            <FaqItem
+              key={index}
+              title={item.title}
               text={item.text}
               index={index}
             />
@@ -47,12 +46,8 @@ const FaqSection = () => {
         <div className="flex items-center justify-center mt-12 md:mt-20">
           <div className="px-8 py-4 text-center bg-green-700 rounded-full">
             <p className="text-gray-50">
-              {t('faqContact')}{" "}
-              <a
-                href="/contact"
-                title=""
-                className="underline"
-              >
+              {t('faqContact')}{' '}
+              <a href="/contact" title="" className="underline">
                 {t('contactUs')}
               </a>
             </p>
@@ -60,8 +55,7 @@ const FaqSection = () => {
         </div>
       </div>
     </section>
+  );
+};
 
-  )
-}
-
-export default FaqSection
+export default FaqSection;

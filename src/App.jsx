@@ -5,6 +5,9 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -12,6 +15,14 @@ import FormSuccessPage from './pages/FormSuccessPage.jsx';
 import './index.css';
 
 function App() {
+  const location = useLocation();
+  useEffect(() => {
+    // Track page views on route changes
+    window.gtag('config', 'G-XXXXXXXXXX', {
+      page_path: location.pathname + location.search,
+    });
+  }, [location]);
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>

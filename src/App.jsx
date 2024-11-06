@@ -4,11 +4,12 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
+import React from 'react';
 
 import HomePage from './pages/HomePage';
-import ContactPage from './pages/ContactPage';
-import NotFoundPage from './pages/NotFoundPage';
-import FormSuccessPage from './pages/FormSuccessPage.jsx';
+const ContactPage = React.lazy(() => './pages/ContactPage');
+const NotFoundPage = React.lazy(() => './pages/NotFoundPage');
+const FormSuccessPage = React.lazy(() => './pages/FormSuccessPage');
 import './index.css';
 
 function App() {

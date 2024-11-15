@@ -93,7 +93,7 @@ const Footer = () => {
             <span className="text-lg text-gray-600 text-center block">
               {t('develop')}{' '}
               <a
-                href="https://faliloukhouma.com/"
+                href="https://www.linkedin.com/in/faliloukhouma/"
                 className="text-green-700 hover:text-green-900 transition duration-300 underline"
               >
                 Falilou

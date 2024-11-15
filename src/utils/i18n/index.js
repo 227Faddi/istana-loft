@@ -4,9 +4,6 @@ import LngDetector from 'i18next-browser-languagedetector';
 import enLocales from './locales/en/en.json';
 import itLocales from './locales/it/it.json';
 
-// the translations
-// (tip move them in a JSON file and import them,
-// or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   en: {
     translation: enLocales,
@@ -18,15 +15,12 @@ const resources = {
 
 i18n
   .use(LngDetector)
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next)
   .init({
     resources,
     fallbackLng: 'en',
-    // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
-    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
-    // if you're using a language detector, do not define the lng option
     interpolation: {
-      escapeValue: false, // react already safes from xss
+      escapeValue: false,
     },
   });
 

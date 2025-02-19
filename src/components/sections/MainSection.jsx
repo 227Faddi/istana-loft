@@ -1,5 +1,5 @@
-import { useRef } from 'react';
 import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from '../Navbar';
 const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
@@ -16,7 +16,7 @@ const MainSection = () => {
     transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
   };
 
-  const mainImage = 'assets/image/extern1.webp';
+  const mainImage = 'assets/images/extern1.webp';
   return (
     <section className="mt-[106px] lg:mt-0 bg-white mb-20 md:mb-52 xl:mb-72">
       <div className="container max-w-screen-xl mx-auto px-4">

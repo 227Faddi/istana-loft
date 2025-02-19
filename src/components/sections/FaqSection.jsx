@@ -1,5 +1,5 @@
-import FaqItem from '../FaqItem';
 import { useTranslation } from 'react-i18next';
+import FaqItem from '../FaqItem';
 
 const FaqSection = () => {
   const { t } = useTranslation();

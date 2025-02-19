@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { IoMenu } from 'react-icons/io5';
 import { useTranslation } from 'react-i18next';
+import { IoMenu } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
         <Link to="/" className="flex text-3xl">
           <div className="w-[40px] h-[40px] mr-2">
             <img
-              src="assets/image/logo.webp"
+              src="assets/images/logo.webp"
               className="object-cover w-full h-full"
               alt="istana loft logo"
             />

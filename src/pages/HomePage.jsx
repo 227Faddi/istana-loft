@@ -1,13 +1,13 @@
-import MainSection from '../components/sections/MainSection';
-import InfoSection from '../components/sections/InfoSection';
-import GallerySection from '../components/sections/GallerySection';
-import ReviewsSection from '../components/sections/ReviewsSection';
-import MapSection from '../components/sections/MapSection';
-import Footer from '../components/Footer';
-import FaqSection from '../components/sections/FaqSection';
-import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+import Footer from '../components/Footer';
+import FaqSection from '../components/sections/FaqSection';
+import GallerySection from '../components/sections/GallerySection';
+import InfoSection from '../components/sections/InfoSection';
+import MainSection from '../components/sections/MainSection';
+import MapSection from '../components/sections/MapSection';
+import ReviewsSection from '../components/sections/ReviewsSection';
 const clientUrl = import.meta.env.VITE_CLIENT_URL;
 
 const HomePage = () => {

@@ -1,10 +1,10 @@
-import { LuHeartHandshake } from 'react-icons/lu';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaKey } from 'react-icons/fa';
+import { LuHeartHandshake } from 'react-icons/lu';
 import { TbBeach } from 'react-icons/tb';
 import InfoItem from '../InfoItem';
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 
 const InfoSection = () => {
   const { t } = useTranslation();
@@ -45,7 +45,7 @@ const InfoSection = () => {
           <div className="hidden xl:block xl:absolute left-0 bottom-0 rounded-tr-3xl rounded-br-3xl overflow-hidden w-[650px] h-[798px] xl:max-w-[45%]">
             <img
               alt="Feature img"
-              src="assets/image/info.webp"
+              src="assets/images/info.webp"
               className="object-cover w-full h-full"
             />
           </div>

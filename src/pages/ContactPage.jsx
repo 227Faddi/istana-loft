@@ -1,7 +1,7 @@
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import ContactSection from '../components/sections/ContactSection';
-import Footer from '../components/Footer';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 const clientUrl = import.meta.env.VITE_CLIENT_URL;
 
 const ContactPage = () => {

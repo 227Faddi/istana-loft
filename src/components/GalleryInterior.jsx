@@ -14,13 +14,13 @@ const GalleryInterior = ({ openLightbox }) => {
         </div>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
           <div className="h-[404px] w-full rounded-3xl">
-            <GalleryImage image="intern5.webp" open={openLightbox} />
+            <GalleryImage image="intern3.webp" open={openLightbox} />
           </div>
           <div className="h-[404px] w-full rounded-3xl">
             <GalleryImage image="intern4.webp" open={openLightbox} />
           </div>
           <div className="h-[404px] w-full rounded-3xl">
-            <GalleryImage image="intern3.webp" open={openLightbox} />
+            <GalleryImage image="intern5.webp" open={openLightbox} />
           </div>
         </div>
       </div>

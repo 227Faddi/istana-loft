@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 const ContactSection = () => {
@@ -40,7 +40,7 @@ const ContactSection = () => {
                 <div className="relative">
                   <img
                     className="w-full h-48 object-cover"
-                    src="assets/image/contact-photo.webp"
+                    src="assets/images/contact-photo.webp"
                     alt="Profile Image"
                     loading="lazy"
                   />

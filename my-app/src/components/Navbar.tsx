@@ -1,22 +1,22 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { IoMenu } from 'react-icons/io5';
 
 const Navbar = () => {
   const airbnbURL = '';
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
   const [navOpen, setNavOpen] = useState(false);
   const toggleNavBar = () => {
     setNavOpen(() => !navOpen);
   };
   const linkClass = 'text-gray-800 text-lg mb-5 lg:mb-0';
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng.toLowerCase());
-  };
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng.toLowerCase());
+  // };
 
   return (
     <nav
@@ -65,10 +65,7 @@ const Navbar = () => {
           <Link href="/contact">{t('contact')}</Link>
         </li>
         <li>
-          <button
-            onClick={() => changeLanguage(t('otherLng'))}
-            className={linkClass}
-          >
+          <button onClick={() => console.log('change')} className={linkClass}>
             {t('otherLng')}
           </button>
         </li>

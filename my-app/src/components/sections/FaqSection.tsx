@@ -1,8 +1,10 @@
-import { useTranslation } from 'react-i18next';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import FaqItem from '../FaqItem';
 
 const FaqSection = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const content = [
     {
       title: t('faqItem1Title'),

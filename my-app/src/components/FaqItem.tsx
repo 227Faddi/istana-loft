@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 const FaqItem = ({ title, text, index }) => {
   const key = index;

@@ -1,11 +1,11 @@
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
 import { FaRegFaceSadTear } from 'react-icons/fa6';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 const NotFoundPage = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <>
@@ -26,7 +26,7 @@ const NotFoundPage = () => {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
-              to="/"
+              href="/"
               className="px-5 py-3 border-2 hover:border-green-700 rounded-lg font-semibold hover:text-green-700 hover:bg-white text-lg bg-green-700 text-white transition ease-linear duration-500"
             >
               {t('homePageButton')}

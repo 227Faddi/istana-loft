@@ -1,7 +1,3 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import Footer from '../components/Footer';
 import FaqSection from '../components/sections/FaqSection';
 import GallerySection from '../components/sections/GallerySection';
@@ -11,16 +7,16 @@ import MapSection from '../components/sections/MapSection';
 import ReviewsSection from '../components/sections/ReviewsSection';
 
 const HomePage = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.getElementById(location.hash.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (location.hash) {
+  //     const element = document.getElementById(location.hash.replace('#', ''));
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   }
+  // }, [location]);
 
   return (
     <>

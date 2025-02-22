@@ -1,6 +1,8 @@
-import { FaStar } from 'react-icons/fa';
+'use client';
+
 import { motion } from 'framer-motion';
-const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
+import { FaStar } from 'react-icons/fa';
+const airbnbURL = '';
 
 const ReviewCard = ({ author, comment, photo, from, index }) => {
   const key = index;

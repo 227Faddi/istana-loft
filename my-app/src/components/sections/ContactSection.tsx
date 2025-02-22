@@ -1,10 +1,12 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 
 const ContactSection = () => {
-  const navigate = useNavigate();
-  const { t } = useTranslation();
+  const router = useRouter();
+  const t = useTranslations();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -21,7 +23,7 @@ const ContactSection = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
       });
-      navigate('/form-success');
+      router.push('/contact/success');
     } catch (err) {
       alert(err);
     }

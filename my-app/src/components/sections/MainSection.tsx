@@ -1,11 +1,13 @@
+'use client';
+
 import { useInView } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import Navbar from '../Navbar';
-const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
+const airbnbURL = '';
 
 const MainSection = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const animationTarget = useRef(null);
   const isInView = useInView(animationTarget, { once: true });

@@ -1,13 +1,16 @@
+'use client';
+
 import { useInView } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import { FaKey } from 'react-icons/fa';
 import { LuHeartHandshake } from 'react-icons/lu';
 import { TbBeach } from 'react-icons/tb';
 import InfoItem from '../InfoItem';
 
 const InfoSection = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
+
   const animationTarget = useRef(null);
   const isInView = useInView(animationTarget, { once: true });
 

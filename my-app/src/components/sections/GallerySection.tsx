@@ -1,11 +1,13 @@
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import GalleryExterior from '../GalleryExterior';
 import GalleryInterior from '../GalleryInterior';
-import { useTranslation } from 'react-i18next';
 
 const GallerySection = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState('');

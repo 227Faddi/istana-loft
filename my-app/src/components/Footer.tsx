@@ -1,15 +1,16 @@
-import { FaInstagram } from 'react-icons/fa';
-import { FaFacebookSquare } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-const airbnbURL = import.meta.env.VITE_AIRBNB_URL;
+'use client';
+
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+const airbnbURL = '';
 
 const Footer = () => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng.toLowerCase());
-  };
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng.toLowerCase());
+  // };
 
   return (
     <footer className="w-full py-14">
@@ -36,7 +37,7 @@ const Footer = () => {
           <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
             <li>
               <Link
-                to="/#gallery"
+                href="/#gallery"
                 className="text-gray-800 hover:text-green-700"
               >
                 {t('photos')}
@@ -44,25 +45,31 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/#reviews"
+                href="/#reviews"
                 className=" text-gray-800 hover:text-green-700"
               >
                 {t('reviews')}
               </Link>
             </li>
             <li>
-              <Link to="/#map" className=" text-gray-800 hover:text-green-700">
+              <Link
+                href="/#map"
+                className=" text-gray-800 hover:text-green-700"
+              >
                 {t('location')}
               </Link>
             </li>
             <li>
-              <Link to="/#faq" className=" text-gray-800 hover:text-green-700">
+              <Link
+                href="/#faq"
+                className=" text-gray-800 hover:text-green-700"
+              >
                 FAQ
               </Link>
             </li>
             <li>
               <Link
-                to="/contact"
+                href="/contact"
                 className=" text-gray-800 hover:text-green-700"
               >
                 {t('contact')}
@@ -79,7 +86,7 @@ const Footer = () => {
             </li>
             <li>
               <button
-                onClick={() => changeLanguage(t('otherLng'))}
+                onClick={() => console.log('change')}
                 className="text-gray-800 hover:text-green-700"
               >
                 {t('otherLng')}

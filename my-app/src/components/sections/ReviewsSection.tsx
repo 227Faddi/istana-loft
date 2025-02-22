@@ -1,8 +1,9 @@
+import { useTranslations } from 'next-intl';
 import ReviewCard from '../ReviewCard';
-import { useTranslation } from 'react-i18next';
 
 const ReviewsSection = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
+
   const content = [
     {
       author: 'Vanessa',

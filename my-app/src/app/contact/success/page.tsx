@@ -1,11 +1,11 @@
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
 import { FaRegSmileWink } from 'react-icons/fa';
 import Footer from '../../../components/Footer';
 import Navbar from '../../../components/Navbar';
 
 const FormSuccessPage = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <>

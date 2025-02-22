@@ -1,0 +1,28 @@
+{
+  "node": {
+    "00131885a3f065136d04bdf0cf005ed75617ce6f82": {
+      "workers": {
+        "app/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ffaddi%2FDesktop%2FWeb%20Development%2FProjects%2Fistana-loft%2Fsrc%2Fservices%2Flocale.ts%22%2C%5B%5B%2200131885a3f065136d04bdf0cf005ed75617ce6f82%22%2C%22getUserLocale%22%5D%2C%5B%224058519d0bb7ceaa6c6ecf9f29642c249af55c0839%22%2C%22setUserLocale%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "4058519d0bb7ceaa6c6ecf9f29642c249af55c0839": {
+      "workers": {
+        "app/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Ffaddi%2FDesktop%2FWeb%20Development%2FProjects%2Fistana-loft%2Fsrc%2Fservices%2Flocale.ts%22%2C%5B%5B%2200131885a3f065136d04bdf0cf005ed75617ce6f82%22%2C%22getUserLocale%22%5D%2C%5B%224058519d0bb7ceaa6c6ecf9f29642c249af55c0839%22%2C%22setUserLocale%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "4GXpzN3XTYVe+W/KH8womNdtCzJ/LGRvSN/FEMdDDcc="
+}

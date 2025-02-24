@@ -12,8 +12,8 @@ const NotFoundPage = () => {
       <div className="xl:px-32">
         <Navbar />
       </div>
-      <div className="mt-[106px] lg:mt-0 grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
-        <div className="flex flex-col items-center">
+      <div className="mt-[106px] lg:mt-0 grid min-h-full place-items-center px-6 py-28 sm:py-48 lg:px-8">
+        <div className="flex flex-col items-center text-center">
           <FaRegFaceSadTear
             size={50}
             className="font-semibold text-green-700"

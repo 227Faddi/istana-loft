@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
@@ -27,7 +29,7 @@ const Footer = () => {
               <FaInstagram className="text-4xl" />
             </a>
           </div>
-          <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
+          <ul className="text-lg flex items-center justify-center flex-wrap gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
             <li>
               <Link
                 href="/#gallery"

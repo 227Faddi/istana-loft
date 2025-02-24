@@ -51,8 +51,8 @@ const InfoSection = () => {
               alt="Feature img"
               src="/assets/images/info.webp"
               className="object-cover w-full h-full"
-              width={2000}
-              height={2000}
+              fill
+              sizes="(max-width: 1280px) 45vw, 650px"
             />
           </div>
           <div

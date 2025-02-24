@@ -58,10 +58,10 @@ const HomePage = () => {
           <Navbar />
           <div className="flex items-center justify-center xl:justify-start xl:max-w-[55%]">
             <div className="mt-28 text-center xl:text-left">
-              <h1 className="font-semibold text-4xl md:text-6xl lg:text-7xl text-gray-900 leading-normal mb-6 italic">
+              <h1 className="font-semibold text-4xl md:text-6xl lg:text-7xl text-gray-900 mb-6 italic">
                 {t('mainTitle1')} <br /> {t('mainTitle2')}
               </h1>
-              <p className="font-normal text-xl text-gray-600 leading-relaxed mb-12">
+              <p className="font-normal text-xl text-gray-600 mb-12">
                 {t('mainSubTitle1')} <br /> {t('mainSubTitle2')}
               </p>
               <a
@@ -77,8 +77,8 @@ const HomePage = () => {
                 alt="Home img"
                 src="/assets/images/extern1.webp"
                 className="object-cover w-full h-full"
-                width={2000}
-                height={2000}
+                fill
+                sizes="(max-width: 1280px) 45vw, 708px"
               />
             </div>
           </div>

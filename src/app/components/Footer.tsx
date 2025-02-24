@@ -1,5 +1,3 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';

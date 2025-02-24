@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
 
 const FormSuccessPage = () => {
-  const t = useTranslations();
+  const t = useTranslations('FormSuccessPage');
 
   return (
     <>
@@ -16,17 +16,17 @@ const FormSuccessPage = () => {
         <div className="flex flex-col items-center text-center">
           <FaRegSmileWink size={50} className="font-semibold text-green-700" />
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            {t('formSuccess')}
+            {t('title')}
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600">
-            {t('formSuccessMessage')}
+            {t('message')}
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href="/"
               className="px-5 py-3 border-2 hover:border-green-700 rounded-lg font-semibold hover:text-green-700 hover:bg-white text-lg bg-green-700 text-white transition ease-linear duration-500"
             >
-              {t('homePageButton')}
+              {t('button')}
             </Link>
           </div>
         </div>

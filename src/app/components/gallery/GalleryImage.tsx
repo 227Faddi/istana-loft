@@ -1,18 +1,21 @@
+'use client';
+
 import Image from 'next/image';
 
 type Props = {
   image: string;
-  open: (path: string) => void;
+  openLightbox: (path: string) => void;
 };
 
-const GalleryImage = ({ image, open }: Props) => {
+const GalleryImage = ({ image, openLightbox }: Props) => {
   return (
     <Image
       src={`/assets/images/${image}`}
       alt="Gallery image"
       className="gallery-image object-cover rounded-3xl w-full h-full"
-      onClick={() => open(`assets/images/${image}`)}
+      onClick={() => openLightbox(`assets/images/${image}`)}
       fill
+      sizes="(max-width: 768px) 100vw, 50vw"
     />
   );
 };

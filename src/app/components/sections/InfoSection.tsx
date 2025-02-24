@@ -1,9 +1,5 @@
-'use client';
-
-import { useInView } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useRef } from 'react';
 import { FaKey } from 'react-icons/fa';
 import { LuHeartHandshake } from 'react-icons/lu';
 import { TbBeach } from 'react-icons/tb';
@@ -11,15 +7,6 @@ import InfoItem from '../InfoItem';
 
 const InfoSection = () => {
   const t = useTranslations();
-
-  const animationTarget = useRef(null);
-  const isInView = useInView(animationTarget, { once: true });
-
-  const animation = {
-    transform: isInView ? 'none' : 'translateX(200px)',
-    opacity: isInView ? 1 : 0,
-    transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-  };
 
   const content = [
     {
@@ -55,11 +42,7 @@ const InfoSection = () => {
               sizes="(max-width: 1280px) 45vw, 650px"
             />
           </div>
-          <div
-            className="flex flex-col items-center xl:max-w-[55%]"
-            ref={animationTarget}
-            style={animation}
-          >
+          <div className="flex flex-col items-center xl:max-w-[55%]">
             <h2 className="font-semibold text-gray-900 text-xl md:text-4xl text-center leading-normal mb-6 italic">
               {t('infoTitle1')} <br /> {t('infoTitle2')}
             </h2>

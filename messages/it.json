@@ -51,20 +51,32 @@
   "rights": "© Istana Loft 2024, Tutti i diritti riservati.",
   "develop": "Sviluppato da",
 
-  "contactTitle": "Contatta Giulio",
-  "contactName": "Giulio",
-  "contactRole": "Proprietario",
-  "contactBio": "Mi chiamo Giulio, sono un medico anestesista rianimatore a Olbia, nel nord della splendida Sardegna. Lavoro in ospedale e nel servizio di elisoccorso, e ho una grande passione per il surf, la vela, l'arrampicata e lo sci alpino. Con gli amici, esploro l'isola alla ricerca delle migliori onde, viaggiando e scoprendo nuove esperienze.",
-  "contactSubTitle": "Hai domande o hai bisogno di assistenza?",
-  "formName": "Nome",
-  "formEmail": "Email",
-  "formMessage": "Messaggio",
-  "submit": "Invia",
+  "ContactPage": {
+    "title": "Contatta Giulio",
+    "name": "Giulio",
+    "role": "Proprietario",
+    "bio": "Mi chiamo Giulio, sono un medico anestesista rianimatore a Olbia, nel nord della splendida Sardegna. Lavoro in ospedale e nel servizio di elisoccorso, e ho una grande passione per il surf, la vela, l'arrampicata e lo sci alpino. Con gli amici, esploro l'isola alla ricerca delle migliori onde, viaggiando e scoprendo nuove esperienze.",
+    "form": {
+      "title": "Hai domande o hai bisogno di assistenza?",
+      "name": "Nome",
+      "nameHolder": "Inserisci un nome",
+      "email": "Email",
+      "emailHolder": "Inserisci un'email",
+      "message": "Messaggio",
+      "messageHolder": "Inserisci un messaggio",
+      "submit": "Invia"
+    }
+  },
 
-  "pageNotFound": "Pagina non trovata",
-  "pageNotFoundMessage": "Spiacenti, non siamo riusciti a trovare la pagina che stai cercando.",
-  "homePageButton": "Torna alla Homepage",
+  "NotFoundPage": {
+    "title": "Pagina non trovata",
+    "message": "Spiacenti, non siamo riusciti a trovare la pagina che stai cercando.",
+    "button": "Torna alla Homepage"
+  },
 
-  "formSuccess": "Grazie per averci contattato!",
-  "formSuccessMessage": "Giulio ti risponderà a breve."
+  "FormSuccessPage": {
+    "title": "Grazie per averci contattato!",
+    "message": "Giulio ti risponderà a breve.",
+    "button": "Torna alla Homepage"
+  }
 }

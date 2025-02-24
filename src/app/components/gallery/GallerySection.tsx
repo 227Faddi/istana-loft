@@ -4,8 +4,8 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import GalleryExterior from '../GalleryExterior';
-import GalleryInterior from '../GalleryInterior';
+import GalleryExterior from './GalleryExterior';
+import GalleryInterior from './GalleryInterior';
 
 const GallerySection = () => {
   const t = useTranslations();

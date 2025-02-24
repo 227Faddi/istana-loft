@@ -40,7 +40,7 @@ const ReviewCard = ({ author, comment, photo, index }: Props) => {
         {comment}
       </p>
       <div className="mt-6 flex items-center gap-6 ">
-        <div className="h-10 w-10 overflow-hidden rounded-full shadow-sm outline-neutral-800">
+        <div className="w-10 h-10 overflow-hidden rounded-full shadow-sm outline-neutral-800">
           <div className="relative inline-block overflow-hidden rounded-lg border-neutral-800 w-10 h-10">
             <Image
               alt="profile image of reviewer"
@@ -48,7 +48,8 @@ const ReviewCard = ({ author, comment, photo, index }: Props) => {
               src={photo}
               className="inline-block object-cover w-full h-full"
               style={{ color: 'transparent' }}
-              fill={true}
+              width={40}
+              height={40}
             />
           </div>
         </div>

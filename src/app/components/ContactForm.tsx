@@ -19,12 +19,12 @@ const schema = z
       .toLowerCase()
       .min(1, { message: 'Email is required.' })
       .email({ message: 'Please enter a valid email address.' })
-      .max(100, { message: 'Email cannot exceed 100 characters.' }), // Increased limit
+      .max(25, { message: 'Email cannot exceed 25 characters.' }),
     message: z
       .string()
       .trim()
       .min(1, { message: 'Message is required.' })
-      .max(60, { message: 'Message cannot exceed 60 characters.' }),
+      .max(80, { message: 'Message cannot exceed 80 characters.' }),
   })
   .strict();
 
@@ -32,7 +32,7 @@ type ContactForm = z.infer<typeof schema>;
 
 const ContactForm = () => {
   const router = useRouter();
-  const t = useTranslations();
+  const t = useTranslations('ContactPage.form');
 
   const {
     register,
@@ -53,48 +53,61 @@ const ContactForm = () => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <div className="py-3">
-        <h2 className="text-gray-900 text-3xl text-center">
-          {t('contactSubTitle')}
-        </h2>
+        <h2 className="text-gray-900 text-3xl text-center">{t('title')}</h2>
       </div>
-      <div className="py-3">
+      <div className="py-2">
+        <label htmlFor="name" className="block font-medium text-gray-700 mb-2">
+          {t('name')}
+        </label>
         <input
           {...register('name')}
           type="text"
-          placeholder="Enter a name"
+          id="name"
+          placeholder={t('nameHolder')}
           className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
         />
         <p className="text-red-700 h-4 text-sm sm:text-base">
           {errors?.name?.message}
         </p>
       </div>
-      <div className="py-3">
+      <div className="py-2">
+        <label htmlFor="email" className="block font-medium text-gray-700 mb-2">
+          {t('email')}
+        </label>
         <input
           {...register('email')}
           type="text"
-          placeholder="Enter an email"
+          id="email"
+          placeholder={t('emailHolder')}
           className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
         />
         <p className="text-red-700 h-4 text-sm sm:text-base">
           {errors?.email?.message}
         </p>
       </div>
-      <div className="py-3">
+      <div className="py-2">
+        <label
+          htmlFor="message"
+          className="block font-medium text-gray-700 mb-2"
+        >
+          {t('message')}
+        </label>
         <textarea
           {...register('message')}
-          placeholder="Enter a message"
+          id="message"
+          placeholder={t('messageHolder')}
           className="px-4 py-4 w-full bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
         />
         <p className="text-red-700 h-4 text-sm sm:text-base">
           {errors?.message?.message}
         </p>
       </div>
-      <div className="py-3">
+      <div className="py-2">
         <button
           className="w-full py-4 font-semibold text-lg text-white bg-green-700 rounded-xl hover:bg-green-900 transition ease-in-out duration-500"
           type="submit"
         >
-          {isSubmitting ? 'Loading' : t('submit')}
+          {isSubmitting ? '...' : t('submit')}
         </button>
       </div>
     </form>

@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 const ContactPage = () => {
-  const t = useTranslations();
+  const t = useTranslations('ContactPage');
 
   return (
     <>
@@ -16,7 +16,7 @@ const ContactPage = () => {
         <div className="container max-w-screen-xl mx-auto px-4 xl:relative">
           <div className="bg-green-800 rounded-3xl py-14 px-6">
             <h1 className="text-center text-white font-semibold text-4xl mb-8 italic">
-              {t('contactTitle')}
+              {t('title')}
             </h1>
             <div className="flex flex-col lg:flex-row items-center justify-evenly">
               <div className="text-center lg:text-left mb-10 lg:mb-0">
@@ -26,16 +26,16 @@ const ContactPage = () => {
                       className="w-full h-48 object-cover"
                       src="/assets/images/contact-photo.webp"
                       alt="Profile Image"
-                      height={1000}
-                      width={1000}
+                      width={500}
+                      height={200}
                     />
                   </div>
                   <div className="px-6 py-4">
                     <div className="text-xl font-semibold text-gray-800">
-                      {t('contactName')}
+                      {t('name')}
                     </div>
-                    <p className="text-gray-600">{t('contactRole')}</p>
-                    <p className="px-6 py-4">{t('contactBio')}</p>
+                    <p className="text-gray-600">{t('role')}</p>
+                    <p className="px-6 py-4">{t('bio')}</p>
                   </div>
                 </div>
               </div>

@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { FaRegFaceSadTear } from 'react-icons/fa6';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 const NotFoundPage = () => {
   const t = useTranslations();

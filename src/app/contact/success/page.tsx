@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { FaRegSmileWink } from 'react-icons/fa';
-import Footer from '../../../components/Footer';
-import Navbar from '../../../components/Navbar';
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar';
 
 const FormSuccessPage = () => {
   const t = useTranslations();

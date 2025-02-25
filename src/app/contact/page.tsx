@@ -1,8 +1,13 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { Metadata } from 'next/types';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+
+export const metadata: Metadata = {
+  title: 'Istana Loft - Contact',
+};
 
 const ContactPage = () => {
   const t = useTranslations('ContactPage');

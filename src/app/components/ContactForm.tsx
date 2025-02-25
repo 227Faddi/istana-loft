@@ -1,5 +1,6 @@
 'use client';
 
+import sendContactForm from '@/actions/sendContactForm';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
@@ -41,7 +42,7 @@ const ContactForm = () => {
   } = useForm<ContactForm>({ resolver: zodResolver(schema) });
 
   const onSubmit: SubmitHandler<ContactForm> = async (formData) => {
-    console.log(formData);
+    await sendContactForm(formData);
     router.push('/contact/success');
   };
 

@@ -16,6 +16,7 @@ const GalleryImage = ({ image, openLightbox }: Props) => {
       onClick={() => openLightbox(`assets/images/${image}`)}
       fill
       sizes="(max-width: 768px) 100vw, 50vw"
+      priority={false}
     />
   );
 };

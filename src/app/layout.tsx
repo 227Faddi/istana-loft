@@ -24,10 +24,6 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <title>next-intl example</title>
-      </head>
-
       <NextIntlClientProvider messages={messages}>
         <body className={barlow.className}>{children}</body>
       </NextIntlClientProvider>

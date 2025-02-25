@@ -1,8 +1,13 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { Metadata } from 'next/types';
 import { FaRegSmileWink } from 'react-icons/fa';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
+
+export const metadata: Metadata = {
+  title: 'Istana Loft - Contact',
+};
 
 const FormSuccessPage = () => {
   const t = useTranslations('FormSuccessPage');

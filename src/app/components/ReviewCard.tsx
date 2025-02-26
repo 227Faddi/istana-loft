@@ -17,12 +17,13 @@ const ReviewCard = ({ author, comment, photo, index }: Props) => {
   return (
     <motion.div
       className="flex flex-col justify-between rounded-3xl border-2 border-neutral-800 bg-white text-gray-700 p-8 shadow-sm max-w-sm mx-auto"
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 10 }}
       whileInView={{
         opacity: 1,
         y: 0,
         transition: {
           delay: 0.1 * index,
+          duration: 1,
         },
       }}
       viewport={{

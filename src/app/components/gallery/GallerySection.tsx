@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { useState } from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import GalleryExterior from './GalleryExterior';
@@ -10,39 +9,6 @@ import GalleryInterior from './GalleryInterior';
 const GallerySection = () => {
   const t = useTranslations();
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState('');
-
-  // Open lightbox and set the selected image
-  const openLightbox = (imageSrc: string) => {
-    setCurrentImage(imageSrc);
-    setLightboxOpen(true);
-  };
-
-  // Close lightbox
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-  };
-
-  const zoom = (
-    <div
-      className="lightbox fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center px-8"
-      onClick={closeLightbox}
-    >
-      <span
-        className="close text-white text-3xl absolute top-5 right-10 cursor-pointer"
-        onClick={closeLightbox}
-      >
-        &times;
-      </span>
-      <Image
-        src={currentImage}
-        alt="Lightbox"
-        className="lightbox-image rounded-3xl max-h-[600px] transition-transform duration-500 ease-in-out"
-        fill={true}
-      />
-    </div>
-  );
 
   return (
     <section className="bg-white px-4 py-10 md:py-16" id="gallery">
@@ -73,7 +39,7 @@ const GallerySection = () => {
                 : 'opacity-0 translate-x-10'
             }`}
           >
-            <GalleryExterior openLightbox={openLightbox} />
+            <GalleryExterior />
           </TabPanel>
           <TabPanel
             className={`transition-opacity duration-[1000ms] ease-in-out ${
@@ -82,11 +48,10 @@ const GallerySection = () => {
                 : 'opacity-0 translate-x-10'
             }`}
           >
-            <GalleryInterior openLightbox={openLightbox} />
+            <GalleryInterior />
           </TabPanel>
         </Tabs>
       </div>
-      {lightboxOpen && zoom}
     </section>
   );
 };

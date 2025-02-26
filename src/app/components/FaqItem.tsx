@@ -12,12 +12,13 @@ const FaqItem = ({ title, text, index }: Props) => {
   return (
     <motion.div
       className="flex items-start"
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 10 }}
       whileInView={{
         opacity: 1,
         y: 0,
         transition: {
           delay: 0.1 * index,
+          duration: 1,
         },
       }}
       viewport={{

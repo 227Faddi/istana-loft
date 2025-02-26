@@ -57,6 +57,7 @@ const InfoSection = () => {
                   title={item.title}
                   text1={item.text1}
                   text2={item.text2}
+                  index={index}
                 />
               ))}
             </div>

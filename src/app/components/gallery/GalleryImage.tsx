@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 type Props = {
@@ -14,7 +12,6 @@ const GalleryImage = ({ image }: Props) => {
       className="gallery-image object-cover rounded-3xl w-full h-full"
       fill
       sizes="(max-width: 768px) 100vw, 50vw"
-      priority={false}
     />
   );
 };

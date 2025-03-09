@@ -1,5 +1,4 @@
 import Map from '@/app/components/Map';
-import Footer from './components/Footer';
 import GallerySection from './components/gallery/GallerySection';
 import FaqSection from './components/sections/FaqSection';
 import HeroSection from './components/sections/HeroSection';
@@ -15,7 +14,6 @@ const HomePage = () => {
       <ReviewSection />
       <Map />
       <FaqSection />
-      <Footer />
     </>
   );
 };

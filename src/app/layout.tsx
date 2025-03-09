@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Barlow } from 'next/font/google';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import './globals.css';
 
 const barlow = Barlow({
@@ -25,7 +27,13 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <NextIntlClientProvider messages={messages}>
-        <body className={barlow.className}>{children}</body>
+        <body className={barlow.className}>
+          <div className="xl:px-32">
+            <Navbar />
+          </div>
+          {children}
+          <Footer />
+        </body>
       </NextIntlClientProvider>
     </html>
   );

@@ -1,4 +1,4 @@
-import Navbar from '@/app/components/Navbar';
+import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -8,9 +8,21 @@ const HeroSection = () => {
   return (
     <section className="mt-[106px] lg:mt-0 bg-white mb-20 md:mb-52 xl:mb-72">
       <div className="container max-w-screen-xl mx-auto px-4">
-        <Navbar />
         <div className="flex items-center justify-center xl:justify-start xl:max-w-[55%]">
-          <div className="mt-28 text-center xl:text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1,
+              },
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="mt-28 text-center xl:text-left"
+          >
             <h1 className="font-semibold text-4xl md:text-6xl lg:text-7xl text-gray-900 mb-6 italic">
               {t('mainTitle1')} <br /> {t('mainTitle2')}
             </h1>
@@ -24,14 +36,16 @@ const HeroSection = () => {
             >
               {t('mainButton')}
             </a>
-          </div>
+          </motion.div>
           <div className="relative hidden xl:block xl:absolute z-0 top-0 right-0 overflow-hidden rounded-bl-3xl w-[708px] h-[800px] xl:max-w-[45%]">
             <Image
               alt="Home img"
               src="/assets/images/extern1.webp"
               className="object-cover w-full h-full"
               fill
-              sizes="(max-width: 1280px) 45vw, 708px"
+              sizes="(max-width: 640px) 100vw, 
+              (max-width: 1024px) 50vw, 
+              33vw"
             />
           </div>
         </div>

@@ -39,7 +39,9 @@ const InfoSection = () => {
               src="/assets/images/info.webp"
               className="object-cover w-full h-full"
               fill
-              sizes="(max-width: 1280px) 45vw, 650px"
+              sizes="(max-width: 640px) 100vw, 
+              (max-width: 1024px) 50vw, 
+              33vw"
             />
           </div>
           <div className="flex flex-col items-center xl:max-w-[55%]">

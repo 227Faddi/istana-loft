@@ -20,7 +20,7 @@ const InfoItem = ({ icon, title, text1, text2, index }: Props) => {
         y: 0,
         transition: {
           delay: 0.1 * index,
-          duration: 1,
+          duration: 1.5,
         },
       }}
       viewport={{

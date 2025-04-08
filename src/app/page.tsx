@@ -1,4 +1,4 @@
-import Map from '@/app/components/Map';
+import MapSection from '@/app/components/sections/MapSection';
 import GallerySection from './components/gallery/GallerySection';
 import FaqSection from './components/sections/FaqSection';
 import HeroSection from './components/sections/HeroSection';
@@ -12,7 +12,7 @@ const HomePage = () => {
       <InfoSection />
       <GallerySection />
       <ReviewSection />
-      <Map />
+      <MapSection />
       <FaqSection />
     </>
   );

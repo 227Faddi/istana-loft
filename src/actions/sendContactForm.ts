@@ -14,7 +14,7 @@ const sendContactForm = async (prevState: unknown, formData: FormData) => {
     await resend.emails.send({
       from: 'contact@istanaloft.com',
       to: ['falukhouma27@gmail.com', 'giulioformicola@gmail.com'],
-      subject: 'New contact from Istana Loft',
+      subject: 'Nuovo messagio da Istana Loft',
       react: EmailTemplate({ name, email, message }),
       replyTo: email,
     });

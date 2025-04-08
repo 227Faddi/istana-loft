@@ -1,5 +1,6 @@
 'use server';
 
+import EmailTemplate from '@/app/components/EmailTemplate';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -11,10 +12,10 @@ const sendContactForm = async (prevState: unknown, formData: FormData) => {
     const message = formData.get('message') as string;
 
     await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'falukhouma27@gmail.com',
+      from: 'contact@istanaloft.com',
+      to: ['falukhouma27@gmail.com', 'giulioformicola@gmail.com'],
       subject: 'New contact from Istana Loft',
-      text: `You received a new message from your Istana Loft property:\nName: ${name}\nEmail: ${email}\nMessage: ${message}\n`,
+      react: EmailTemplate({ name, email, message }),
       replyTo: email,
     });
 
